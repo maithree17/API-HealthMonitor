@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Health Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Health Monitor</h1>
+        
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <button id="check-btn" class="primary-btn">Check API Status</button>
+            <button id="toggle-btn" class="danger-btn">Simulate Server Crash</button>
+        </div>
+        
+        <!-- Area to display the health status -->
+        <div id="result-box" class="result-box hidden">
+            <span id="status-text"></span>
+            <p id="message-text"></p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Custom Message Section -->
+        <h2>Send a Message</h2>
+        <div class="input-group">
+            <input type="text" id="custom-message" placeholder="Type a message to the backend...">
+            <button id="send-btn" class="primary-btn">Send</button>
+        </div>
+        
+        <!-- Area to display backend reply -->
+        <div id="reply-box" class="reply-box hidden">
+            <p id="reply-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

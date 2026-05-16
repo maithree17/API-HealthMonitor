@@ -1,0 +1,153 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
+
+.container {
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    margin-bottom: 24px;
+    color: #e94560;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #a8b2d1;
+    text-align: left;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #2a3459;
+    margin: 30px 0;
+}
+
+/* Button & Input Layout */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #2a3459;
+    background-color: #0f172a;
+    color: white;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #e94560;
+}
+
+/* Button styles */
+button {
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.primary-btn {
+    background-color: #0f3460;
+    flex: 1;
+}
+
+.primary-btn:hover {
+    background-color: #1a4f8c;
+    transform: translateY(-2px);
+}
+
+.danger-btn {
+    background-color: #2a1622;
+    border: 1px solid #e94560;
+    color: #e94560;
+    flex: 1;
+}
+
+.danger-btn:hover {
+    background-color: #e94560;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Result & Reply Boxes */
+.result-box, .reply-box {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+.status-up {
+    background-color: rgba(46, 204, 113, 0.1);
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+}
+
+.status-down {
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.reply-box {
+    background-color: #233554;
+    border: 1px solid #3a506b;
+    color: #64ffda;
+    font-weight: normal;
+    text-align: left;
+    font-size: 14px;
+}
+
+#status-text {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+#message-text {
+    font-weight: normal;
+    font-size: 13px;
+    color: #a8b2d1;
+}
