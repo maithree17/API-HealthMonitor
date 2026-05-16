@@ -5,16 +5,32 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/maithree17/API-HealthMonitor.git'
+                checkout scm
             }
         }
 
-        stage('Build & Run with Docker Compose') {
+        stage('Build Backend & Frontend') {
             steps {
+                echo 'Building containers using docker-compose...'
                 bat 'docker-compose down'
                 bat 'docker-compose build'
+            }
+        }
+
+        stage('Run Containers') {
+            steps {
+                echo 'Starting containers...'
                 bat 'docker-compose up -d'
             }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Deployment successful'
+        }
+        failure {
+            echo '❌ Pipeline failed'
         }
     }
 }
